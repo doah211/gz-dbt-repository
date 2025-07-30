@@ -1,7 +1,7 @@
-select * from adwords
+select * from {{ ref('stg_raw_adwords') }}
 union all
-select * from bing
+select * from {{ ref('stg_raw_bing') }}
 union all
-select * from criteo
+select * from {{ ref('stg_raw_criteo') }}
 union all
-select * from facebook
+select * from {{ ref('stg_raw_facebook') }}
