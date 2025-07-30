@@ -7,7 +7,7 @@ with adwords as (
         ads_cost,
         impression,
         click
-    from {{ ref('stg_raw_adwords') }}
+    from {{ ref('stg_raw__adwords') }}
 ),
 
 bing as (
@@ -19,7 +19,7 @@ bing as (
         ads_cost,
         impression,
         click
-    from {{ ref('stg_raw_bing') }}
+    from {{ ref('stg_raw__bing') }}
 ),
 
 criteo as (
@@ -31,7 +31,7 @@ criteo as (
         ads_cost,
         impression,
         click
-    from {{ ref('stg_raw_criteo') }}
+    from {{ ref('stg_raw__criteo') }}
 ),
 
 facebook as (
@@ -43,7 +43,7 @@ facebook as (
         ads_cost,
         impression,
         click
-    from {{ ref('stg_raw_facebook') }}
+    from {{ ref('stg_raw__facebook') }}
 )
 
 select * from adwords
